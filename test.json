@@ -1,0 +1,9 @@
+{"cars":
+[
+  {"v":"m","n":"Mercedes","c":false},
+  {"v":"v","n":"Volkswagen","c":true},
+  {"v":"b","n":"BMW","c":true},
+  {"v":"l","n":"Lamborghini","c":true},
+  {"v":"f","n":"Ferrari","c":false}
+]
+}

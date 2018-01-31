@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-controller="MyController">
+<div class="container">
+<h1>Custom Dropdown</h1>
+<hr/>
+
+<label>Select A Car:</label>
+<div class="overlay" ng-show="overlay" ng-click="showList = false;overlay = false;"></div>
+<div class="btn btn-info" ng-click="showDropdown()" dropdown>{{selectedCar}} <i class="caret"></i></div>
+<div class="drop-down" ng-show="showList" dropdown-options ng-transclude>
+    <ul>
+        <li ng-repeat="car in viewModel"><a href="" ng-click="selectItem(car.n)">{{car.n}}</a></li>
+    </ul>
+</div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
